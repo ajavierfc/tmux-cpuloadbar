@@ -1,8 +1,12 @@
-# tmux-cpuloadbar
+# tmux CPU load bar
 CPU load bar indicator for tmux pane
 
-## configure
-I created a symbolic link targeting /path/to/loadbar so I configure mine editing ~/.tmux.conf and add/update your config like:
+## Configure
+You can create a symbolic link targeting /path/to/loadbar and therefore edit `~/.tmux.conf` adding/updating lines like:
 ```
 set -g status-right '#(loadbar)'
 set -g status-interval 5
+```
+
+## Preview
+<img src='https://i.imgur.com/d7FponM.png'>
