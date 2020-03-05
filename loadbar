@@ -13,7 +13,7 @@ MID_CHAR = '▪'
 EMPTY_CHAR = '▫'
 
 FILL_COLOR = '#[fg=brightgreen]'
-MID_COLOR = '#[fg=brightred]'
+MID_COLOR = '#[fg=brightyellow]'
 EMPTY_COLOR = '#[fg=default bg=default]'
 ALARM_COLOR = '#[fg=brightred]'
 PCT_COLOR = '#[fg=default]'
@@ -31,7 +31,7 @@ fill = FILL_CHAR * (pos - 1)
 empty = EMPTY_CHAR * int(SIZE - pos)
 mid = "" if not pos else MID_CHAR
 fill_color = ALARM_COLOR if pos >= ALARM else FILL_COLOR
-mid_color = ALARM_COLOR if pos == SIZE else MID_COLOR
+mid_color = ALARM_COLOR if load >= 100 else MID_COLOR
 pct_color = ALARM_COLOR if pos >= ALARM else PCT_COLOR
 
 print(pct_color + "{}% ".format(load) + fill_color + fill + mid_color + mid + EMPTY_COLOR + empty + '#[bg=default fg=default]')
