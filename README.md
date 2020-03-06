@@ -1,5 +1,5 @@
 # tmux CPU load bar
-CPU load bar indicator for tmux pane
+CPU load bar indicator for the tmux bar
 
 ## Configure
 You can create a symbolic link targeting /path/to/loadbar and therefore edit `~/.tmux.conf` adding/updating lines like:
