@@ -24,8 +24,10 @@ nproc = len(re.findall('^processor\s*:\s*\d+', str, re.MULTILINE))
 str = open('/proc/loadavg', 'r').read()
 load = int(str.split()[0].replace('.', '')) / nproc
 
-pos = int(Decimal(SIZE * math.ceil(load) / 100).to_integral_value(rounding=ROUND_HALF_UP))
-if pos > SIZE: pos = SIZE
+if load > 100:
+    pos = SIZE
+else:
+    pos = int(Decimal(SIZE * math.ceil(load) / 100).to_integral_value(rounding=ROUND_HALF_UP))
 
 fill = FILL_CHAR * (pos - 1)
 empty = EMPTY_CHAR * int(SIZE - pos)
