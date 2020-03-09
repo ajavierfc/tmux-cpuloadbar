@@ -14,7 +14,7 @@ EMPTY_CHAR = '▫'
 
 FILL_COLOR = '#[fg=brightgreen]'
 MID_COLOR = '#[fg=brightyellow]'
-EMPTY_COLOR = '#[fg=default bg=default]'
+EMPTY_COLOR = '#[fg=default]'
 ALARM_COLOR = '#[fg=brightred]'
 PCT_COLOR = '#[fg=default]'
 
@@ -36,4 +36,4 @@ fill_color = ALARM_COLOR if pos >= ALARM else FILL_COLOR
 mid_color = ALARM_COLOR if load >= 100 else MID_COLOR
 pct_color = ALARM_COLOR if pos >= ALARM else PCT_COLOR
 
-print(pct_color + "{}% ".format(load) + fill_color + fill + mid_color + mid + EMPTY_COLOR + empty + '#[bg=default fg=default]')
+print(pct_color + "{}% ".format(load) + fill_color + fill + mid_color + mid + EMPTY_COLOR + empty + '#[fg=default]')
